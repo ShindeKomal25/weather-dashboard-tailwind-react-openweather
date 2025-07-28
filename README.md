@@ -36,7 +36,7 @@ A responsive, modern weather application built with **React**, **Tailwind CSS**,
 <img src="Images/Weekly Data Chart.png" alt="Weekly Data Chart" width="600"/>
 
 🗺️ Map View
-<img src="Images/Map View.png" alt="Map View" width="600"/
+<img src="Images/Map View.png" alt="Map View" width="600"/>
 
 🌙 Main Tab (Dark Mode)
 <img src="Images/Main Tab (Dark Mode).png" alt="Main Tab (Dark Mode)" width="600"/>
