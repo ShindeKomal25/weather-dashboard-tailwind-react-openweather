@@ -29,11 +29,20 @@ A responsive, modern weather application built with **React**, **Tailwind CSS**,
 ## 📸 Screenshots
 
 <!-- You can add screenshots here -->
-<img src="Images/Main Dashboard.png" alt="Input View" width="600"/>
-<img src="Images/Weekly Data Chart.png" alt="Input View" width="600"/>
-<img src="Images/Map View" alt="Output View" width="600"/>
-<img src="Images/Main Tab (Dark Mode).png" alt="Output View" width="600"/>
-<img src="Images/Weekly Data (Dark Mode).png" alt="Output View" width="600"/>
+🖥️ Main Dashboard (Light Mode)
+<img src="Images/Main Dashboard.png" alt="Main Dashboard" width="600"/>
+
+📈 Weekly Data Chart (Light Mode)
+<img src="Images/Weekly Data Chart.png" alt="Weekly Data Chart" width="600"/>
+
+🗺️ Map View
+<img src="Images/Map View.png" alt="Map View" width="600"/
+
+🌙 Main Tab (Dark Mode)
+<img src="Images/Main Tab (Dark Mode).png" alt="Main Tab (Dark Mode)" width="600"/>
+
+📊 Weekly Data Chart (Dark Mode)
+<img src="Images/Weekly Data (Dark Mode).png" alt="Weekly Data (Dark Mode)" width="600"/>
 
 ---
 
