@@ -30,6 +30,7 @@ A responsive, modern weather application built with **React**, **Tailwind CSS**,
 
 <!-- You can add screenshots here -->
 🖥️ Main Dashboard
+---
 <img src="Images/Main Dashboard.png" alt="Main Dashboard" width="600"/>
 
 📈 Weekly Data Chart
