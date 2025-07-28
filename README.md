@@ -4,15 +4,25 @@ A responsive, modern weather application built with **React**, **Tailwind CSS**,
 
 ---
 
-## 🚀 Features
+✨ Features
 
-- 🌍 Search weather by city name
-- 🕐 24-hour forecast 
-- 🎨 Tailwind CSS for styling
-- 🔄 React hooks for data management
-- ⚡ Fast and responsive
-- ☁️ Deployed on Kubernetes (MicroK8s-ready)
-- 📦 Dockerized for easy deployment
+📍 Search by City
+
+🕶 Light/Dark Mode Toggle with tooltip
+
+📅 Today / Weekly / Map Tabs
+
+🌡 Detailed Highlights (UV Index, AQI, Visibility, Temperature, Humidity)
+
+📊 Interactive Weekly Charts using ECharts
+
+🌐 Responsive and mobile-friendly UI
+
+⚙️ Built with React, TailwindCSS, Recharts, and ECharts
+
+☁️ Deployed on Kubernetes (MicroK8s-ready)
+
+📦 Dockerized for easy deployment
 
 ---
 
@@ -116,3 +126,13 @@ weather-app/
 ├── postcss.config.js
 ├── .env
 └── README.md
+
+✅ TODO
+
+ Add loading skeletons
+
+ Improve error handling for invalid cities
+
+ Add geolocation support
+
+ Deploy to Vercel or Netlify
