@@ -24,15 +24,6 @@ A responsive, modern weather application built with **React**, **Tailwind CSS**,
 
 📦 Dockerized for easy deployment
 
-🖥️ Tech Stack
-Technology	                 Description
-React	                    Frontend Framework
-TailwindCSS	                  Styling
-ECharts	                Weekly weather charts
-Recharts	              Highlight mini-charts
-react-icons	                Icon library
-OpenWeatherMap API	    Weather data provider
-
 ---
 
 ## 📸 Screenshots
@@ -135,3 +126,13 @@ weather-app/
 ├── postcss.config.js
 ├── .env
 └── README.md
+
+✅ TODO
+
+ Add loading skeletons
+
+ Improve error handling for invalid cities
+
+ Add geolocation support
+
+ Deploy to Vercel or Netlify
