@@ -12,7 +12,7 @@ const WeeklyChart = ({ weeklyData, isDark }) => {
   const textColor = isDark ? "#d1d5db" : "#6B7280"; // lighter gray in dark, original gray in light
   const axisLineColorTemp = "#3b82f6";
   const axisLineColorHumidity = "#10b981";
-  const axisLineColorRain = "#6366f1";
+  const axisLineColorRain = "#43a419ff";
   const tooltipBgColor = isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.7)";
   const tooltipTextColor = isDark ? "#f9fafb" : "#fff";
   const legendTextColor = isDark ? "#d1d5db" : "#4B5563";

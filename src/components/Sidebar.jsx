@@ -1,28 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { WiHumidity, WiStrongWind, WiRain, WiBarometer } from "react-icons/wi";
-import { fetchWeatherByCity } from "../services/weatherService";
 import DayLightChart from "./DayLightChart";
 
-const Sidebar = ({ city, setCity, setIsDark }) => {
-  const [inputCity, setInputCity] = useState("New York");
-  const [weather, setWeather] = useState(null);
-
-  useEffect(() => {
-    if (!city) return;
-
-    const getWeather = async () => {
-      try {
-        const data = await fetchWeatherByCity(city);
-        setWeather(data);
-      } catch (error) {
-        console.error("Weather fetch failed:", error);
-        setWeather(null);
-      }
-    };
-
-    getWeather();
-  }, [city]);
+const Sidebar = ({ city, setCity, weather }) => {
+  const [inputCity, setInputCity] = useState(city);
+  //const [error, setError] = useState(null);
 
   useEffect(() => {
     setInputCity(city);
@@ -33,19 +16,22 @@ const Sidebar = ({ city, setCity, setIsDark }) => {
     const trimmedCity = inputCity.trim();
     if (trimmedCity && trimmedCity.toLowerCase() !== city.toLowerCase()) {
       setCity(trimmedCity);
-      setInputCity("");
     }
   };
 
-  const formatDate = (dt) => {
+  const formatDate = (dt, timezoneOffset) => {
+    const localTimestamp = (dt + timezoneOffset) * 1000;
+    const date = new Date(localTimestamp);
     const options = {
       weekday: "long",
       month: "short",
       day: "numeric",
       hour: "2-digit",
       minute: "2-digit",
+      hour12: true,
+      timeZone: "UTC"
     };
-    return new Date(dt * 1000).toLocaleString("en-US", options);
+    return date.toLocaleString("en-US", options);
   };
 
   const getWeatherIcon = (iconCode) =>
@@ -73,14 +59,6 @@ const Sidebar = ({ city, setCity, setIsDark }) => {
           />
           <FiSearch className="absolute left-3 top-2.5 text-gray-500 dark:text-gray-300" />
         </div>
-        {/* <button
-          type="button"
-          onClick={(e) => setInputCity(e.target.value)}
-          className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white p-2 rounded-full transition"
-          aria-label="Toggle Dark Mode"
-        >
-          <FiSearch size={20} />
-        </button> */}
       </form>
 
       {weather && (
@@ -90,7 +68,7 @@ const Sidebar = ({ city, setCity, setIsDark }) => {
               {weather.name}, {weather.sys.country}
             </h2>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-              Today, {formatDate(weather.dt)}
+              Today, {formatDate(weather.dt, weather.timezone)}
             </p>
           </div>
 
